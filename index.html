@@ -7,7 +7,7 @@
       name="description"
       content="A peaceful private stay designed for slow mornings, memorable evenings, and effortless getaways."
     />
-    <title>Casa Sora — Your private escape</title>
+    <title>Balinese Retreat</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,7 +18,7 @@
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Casa Sora home">Casa Sora</a>
+      <a class="brand" href="#top" aria-label="Balinese Retreat home">Balinese Retreat</a>
       <button class="menu-button" aria-label="Open navigation" aria-expanded="false">
         <span></span><span></span>
       </button>
@@ -26,17 +26,17 @@
         <a href="#stay">The stay</a>
         <a href="#amenities">Amenities</a>
         <a href="#location">Location</a>
+        <a href="guide.html">House guide</a>
         <a class="nav-cta" href="https://www.airbnb.com" target="_blank" rel="noreferrer">Check availability</a>
       </nav>
     </header>
 
     <main id="top">
       <section class="hero">
-        <div class="hero-image" role="img" aria-label="Warm, peaceful holiday home surrounded by nature"></div>
+        <div class="hero-image" data-image-slot="hero" role="img" aria-label="Warm, peaceful holiday home surrounded by nature"></div>
         <div class="hero-shade"></div>
         <div class="hero-content reveal">
-          <p class="eyebrow light">A private stay made for unwinding</p>
-          <h1>Your quiet place,<br />away from everything.</h1>
+          <h1>Balinese<br />Retreat</h1>
           <p class="hero-copy">Slow mornings, open skies, and a space that feels like it was always meant for you.</p>
           <a class="button button-light" href="https://www.airbnb.com" target="_blank" rel="noreferrer">
             View dates on Airbnb <span aria-hidden="true">↗</span>
@@ -48,9 +48,9 @@
       <section class="intro section" id="stay">
         <div class="section-label reveal"><span>01</span> The stay</div>
         <div class="intro-copy reveal">
-          <p class="eyebrow">Welcome to Casa Sora</p>
+          <p class="eyebrow">Welcome to Balinese Retreat</p>
           <h2>A considered retreat for the way you want to feel.</h2>
-          <p>Thoughtfully designed for couples, friends, and small families, Casa Sora brings together simple comforts, natural textures, and plenty of room to breathe.</p>
+          <p>Thoughtfully designed for couples, friends, and small families, Balinese Retreat brings together simple comforts, natural textures, and plenty of room to breathe.</p>
         </div>
         <dl class="stay-facts reveal">
           <div><dt>4</dt><dd>Guests</dd></div>
@@ -61,9 +61,9 @@
       </section>
 
       <section class="gallery section" aria-label="Property gallery">
-        <div class="photo photo-large"><span>Living space</span></div>
-        <div class="photo photo-small-one"><span>Restful bedrooms</span></div>
-        <div class="photo photo-small-two"><span>Quiet details</span></div>
+        <div class="photo photo-large" data-image-slot="living"><span>Living space</span></div>
+        <div class="photo photo-small-one" data-image-slot="bedroom"><span>Restful bedrooms</span></div>
+        <div class="photo photo-small-two" data-image-slot="details"><span>Quiet details</span></div>
       </section>
 
       <section class="amenities section" id="amenities">
@@ -81,7 +81,7 @@
       </section>
 
       <section class="quote-section">
-        <div class="quote-image"></div>
+        <div class="quote-image" data-image-slot="review" role="img" aria-label="Relaxed interior at Balinese Retreat"></div>
         <figure class="guest-quote reveal">
           <div class="stars" aria-label="Five stars">★★★★★</div>
           <blockquote>“The kind of place you wish you could keep to yourself. Peaceful, beautiful, and even better than the photos.”</blockquote>
@@ -99,12 +99,12 @@
         </div>
         <div class="map-card reveal">
           <div class="map-lines"></div>
-          <div class="map-pin"><span>Casa<br />Sora</span></div>
+          <div class="map-pin"><span>Balinese<br />Retreat</span></div>
           <p>Exact location shared after booking</p>
         </div>
       </section>
 
-      <section class="booking">
+      <section class="booking" data-image-slot="booking" role="img" aria-label="Balinese Retreat exterior">
         <div class="booking-content reveal">
           <p class="eyebrow light">Your escape is waiting</p>
           <h2>Come stay awhile.</h2>
@@ -115,10 +115,10 @@
     </main>
 
     <footer>
-      <a class="brand" href="#top">Casa Sora</a>
+      <a class="brand" href="#top">Balinese Retreat</a>
       <p>Made for slower days and longer stays.</p>
-      <div><a href="mailto:hello@example.com">Email us</a><a href="#">Instagram</a><a href="#">House rules</a></div>
-      <small>© <span id="year"></span> Casa Sora</small>
+      <div><a href="guide.html">House guide</a><a href="mailto:hello@example.com">Email us</a><a href="#">Instagram</a><a href="#">House rules</a></div>
+      <small>© <span id="year"></span> Balinese Retreat</small>
     </footer>
     <script src="script.js"></script>
   </body>
