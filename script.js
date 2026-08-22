@@ -74,10 +74,18 @@ async function loadImages() {
     images.forEach((image) => {
       if (!image.slot || !isSafeImageUrl(image.url)) return;
 
-      const element = document.querySelector(`[data-image-slot="${CSS.escape(image.slot)}"]`);
+      const element = [...document.querySelectorAll('[data-image-slot]')]
+        .find((candidate) => candidate.dataset.imageSlot === image.slot);
       if (!element) return;
 
-      element.style.backgroundImage = `url("${image.url.replaceAll('"', '%22')}")`;
+      const imageValue = `url("${image.url.replace(/"/g, '%22')}")`;
+      if (element.classList.contains('quote-image')) {
+        element.style.backgroundImage = `linear-gradient(rgba(25,35,28,.46), rgba(25,35,28,.46)), ${imageValue}`;
+      } else if (element.classList.contains('booking')) {
+        element.style.backgroundImage = `linear-gradient(rgba(29,42,32,.72), rgba(29,42,32,.72)), ${imageValue}`;
+      } else {
+        element.style.backgroundImage = imageValue;
+      }
       if (image.alt) element.setAttribute('aria-label', image.alt);
 
       const caption = element.querySelector('span');
