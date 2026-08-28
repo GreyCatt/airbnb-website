@@ -40,6 +40,14 @@ public class PropertyImage {
         this.displayOrder = displayOrder;
     }
 
+    public void update(String slot, String url, String alt, String caption, int displayOrder) {
+        this.slot = slot;
+        this.url = url;
+        this.alt = alt;
+        this.caption = caption;
+        this.displayOrder = displayOrder;
+    }
+
     public Long getId() { return id; }
     public String getSlot() { return slot; }
     public String getUrl() { return url; }
