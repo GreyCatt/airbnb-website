@@ -3,6 +3,6 @@
 .agents
 .codex
 README.md
-compose.yaml
-Dockerfile
 *.log
+backend/target
+frontend/node_modules

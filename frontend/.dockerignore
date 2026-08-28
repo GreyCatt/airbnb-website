@@ -1,8 +1,0 @@
-.git
-.gitignore
-.agents
-.codex
-README.md
-compose.yaml
-Dockerfile
-*.log

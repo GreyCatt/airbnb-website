@@ -10,34 +10,33 @@ Open `index.html` in a browser. For the most reliable local preview, serve this 
 
 Docker Desktop must be installed and running. From this directory, run:
 
-```powershell
-docker compose up --build -d
+```sh
+sh docker/start-dev.sh
 ```
 
 Open `http://localhost:8080` in a browser. The development container watches
 `index.html`, `guide.html`, `styles.css`, and `script.js`; saving any of them automatically
 refreshes the browser.
 
-The image API runs at `http://localhost:3000`. Edit `backend/data/images.json`
-to change image URLs, alt text, captions, or display order. The API reads the
-file on every request, so data changes do not require an image rebuild.
+The Spring image API runs at `http://localhost:3001` and stores its data in the
+PostgreSQL container.
 
 To view logs:
 
-```powershell
-docker compose logs -f
+```sh
+docker compose -f docker/compose.yaml logs -f
 ```
 
 To stop and remove the local container:
 
-```powershell
-docker compose down
+```sh
+docker compose -f docker/compose.yaml down
 ```
 
 To build the smaller production Nginx image instead:
 
-```powershell
-docker build --target production -t balinese-retreat:production .
+```sh
+docker build --target production -f docker/frontend.Dockerfile -t balinese-retreat:production .
 ```
 
 ## Personalize before publishing
@@ -51,12 +50,13 @@ docker build --target production -t balinese-retreat:production .
 
 ## Files
 
-- `index.html` — content and page structure
-- `guide.html` — house guide page scaffold
-- `styles.css` — layout, typography, colors, and image URLs
-- `script.js` — mobile navigation, reveal effects, and current year
-- `Dockerfile` — Nginx container image definition
-- `compose.yaml` — local container and port configuration
-- `nginx.conf` — static-site routing, caching, and security headers
-- `backend/server.js` — read-only Express API
-- `backend/data/images.json` — image URLs and metadata
+- `frontend/index.html` — content and page structure
+- `frontend/guide.html` — house guide page scaffold
+- `frontend/styles.css` — layout, typography, colors, and image URLs
+- `frontend/script.js` — mobile navigation, reveal effects, and current year
+- `docker/frontend.Dockerfile` — development and production website images
+- `docker/backend.Dockerfile` — Spring API image
+- `docker/compose.yaml` — local website, API, and database configuration
+- `docker/start-dev.sh` — development startup helper
+- `docker/nginx.conf` — production static-site configuration
+- `backend/src` — Spring API source
