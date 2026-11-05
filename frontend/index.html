@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="A peaceful private stay designed for slow mornings, memorable evenings, and effortless getaways."
+      content="A private guest suite in Ampang for up to 12 guests, with a pool, mountain views, and a full kitchen."
     />
     <title>Balinese Retreat</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,32 +14,35 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="images/logo-mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css?v=4" />
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Balinese Retreat home">Balinese Retreat</a>
+      <a class="brand" href="#top" aria-label="Balinese Retreat home"><img class="brand-mark" src="images/logo-mark.svg" alt="" /><span class="brand-name">Balinese Retreat</span></a>
       <button class="menu-button" aria-label="Open navigation" aria-expanded="false">
         <span></span><span></span>
       </button>
       <nav class="navigation" aria-label="Main navigation">
-        <a href="#stay">The stay</a>
-        <a href="#amenities">Amenities</a>
-        <a href="#location">Location</a>
-        <a href="guide.html">House guide</a>
-        <a class="nav-cta" href="https://www.airbnb.com" target="_blank" rel="noreferrer">Check availability</a>
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="stay.html">The stay</a>
+        <a href="amenities.html">Amenities</a>
+        <a href="location.html">Location</a>
+        <a href="availability.html">Calendar</a>
+        <a class="nav-cta" href="https://www.airbnb.com/rooms/688787149501313080?source_impression_id=p3_1793886192_P3ub8Sx2WxIDhYxS" target="_blank" rel="noopener noreferrer">Check availability</a>
       </nav>
     </header>
 
     <main id="top">
       <section class="hero">
-        <div class="hero-image" data-image-slot="hero" role="img" aria-label="Warm, peaceful holiday home surrounded by nature"></div>
+        <div class="hero-image" data-image-slot="hero" role="img" aria-label="Poolside dining area opening towards the pool and hills"></div>
         <div class="hero-shade"></div>
         <div class="hero-content reveal">
-          <h1>Balinese<br />Retreat</h1>
-          <p class="hero-copy">Slow mornings, open skies, and a space that feels like it was always meant for you.</p>
-          <a class="button button-light" href="https://www.airbnb.com" target="_blank" rel="noreferrer">
-            View dates on Airbnb <span aria-hidden="true">↗</span>
+          <h1>Balinese Retreat</h1>
+          <p class="hero-copy">A private poolside stay in Ampang with views of Bukit Tabur.</p>
+          <p class="hero-highlights">Up to 12 guests <span aria-hidden="true">·</span> Up to 3 bedrooms <span aria-hidden="true">·</span> Private poolside suite</p>
+          <a class="button button-light" href="availability.html">
+            View availability calendar <span aria-hidden="true">→</span>
           </a>
         </div>
         <a class="scroll-cue" href="#stay">Discover the stay <span>↓</span></a>
@@ -49,21 +52,37 @@
         <div class="section-label reveal"><span>01</span> The stay</div>
         <div class="intro-copy reveal">
           <p class="eyebrow">Welcome to Balinese Retreat</p>
-          <h2>A considered retreat for the way you want to feel.</h2>
-          <p>Thoughtfully designed for couples, friends, and small families, Balinese Retreat brings together simple comforts, natural textures, and plenty of room to breathe.</p>
+          <h2>A little bit of Bali near Kuala Lumpur.</h2>
+          <p>Settle into a private lower-ground suite in Kemensah, Ampang, with your own entrance. The patio and mountain views invite everyone to slow down together.</p>
         </div>
-        <dl class="stay-facts reveal">
-          <div><dt>4</dt><dd>Guests</dd></div>
-          <div><dt>2</dt><dd>Bedrooms</dd></div>
-          <div><dt>2</dt><dd>Beds</dd></div>
-          <div><dt>1</dt><dd>Bathroom</dd></div>
-        </dl>
+        <div class="stay-facts-group reveal">
+          <dl class="stay-facts">
+            <div><dt>12</dt><dd>Guests</dd></div>
+            <div><dt>2–3</dt><dd>Bedrooms</dd></div>
+            <div><dt>4–7</dt><dd>Beds</dd></div>
+            <div><dt>2–3</dt><dd>Bathrooms</dd></div>
+          </dl>
+          <p class="stay-facts-note">For bookings of 8 or more guests, a third bedroom and bathroom are included.</p>
+        </div>
       </section>
 
       <section class="gallery section" aria-label="Property gallery">
-        <div class="photo photo-large" data-image-slot="living"><span>Living space</span></div>
-        <div class="photo photo-small-one" data-image-slot="bedroom"><span>Restful bedrooms</span></div>
-        <div class="photo photo-small-two" data-image-slot="details"><span>Quiet details</span></div>
+        <div class="photo photo-large" data-image-slot="living" role="img" aria-label="Living room opening to a mountain view"><span>Living space and view</span></div>
+        <div class="photo photo-small-one" data-image-slot="bedroom" role="img" aria-label="Bedroom with a wooden four-poster bed and a single bed"><span>One of three bedrooms</span></div>
+        <div class="photo photo-small-two" data-image-slot="details" role="img" aria-label="Stone bath with a freestanding tap"><span>Stone bath</span></div>
+      </section>
+
+      <section class="photo-tour section" aria-labelledby="photo-tour-title">
+        <div class="section-label"><span>More photos</span> Around the property</div>
+        <h2 id="photo-tour-title">Explore the spaces.</h2>
+        <div class="photo-tour-grid">
+          <figure><img src="images/kitchen.jpg" alt="Full kitchen with cabinets, fridge, and stove" loading="lazy" /><figcaption>Full kitchen</figcaption></figure>
+          <figure><img src="images/bedroom-two.jpg" alt="Bedroom with a wooden four-poster bed and a single bed" loading="lazy" /><figcaption>Bedroom two</figcaption></figure>
+          <figure><img src="images/bedroom-three.jpg" alt="Bedroom with one queen bed and two single beds" loading="lazy" /><figcaption>Bedroom three</figcaption></figure>
+          <figure><img src="images/theatre-room.jpg" alt="Theatre room with projector screen and floor seating" loading="lazy" /><figcaption>Theatre room</figcaption></figure>
+          <figure><img src="images/view-patio.jpg" alt="Covered patio overlooking the hills and valley" loading="lazy" /><figcaption>Patio and view</figcaption></figure>
+          <figure><img src="images/private-entrance.jpg" alt="Private garden entrance leading towards the pool area" loading="lazy" /><figcaption>Private entrance</figcaption></figure>
+        </div>
       </section>
 
       <section class="amenities section" id="amenities">
@@ -73,53 +92,44 @@
           <h2>The essentials,<br />and a little more.</h2>
         </div>
         <div class="amenity-grid reveal">
-          <article><span class="icon">⌂</span><h3>Entire home</h3><p>A private place, completely yours for the duration of your stay.</p></article>
-          <article><span class="icon">⌁</span><h3>Fast Wi-Fi</h3><p>Stay connected when you need to, switch off when you don’t.</p></article>
-          <article><span class="icon">☕</span><h3>Full kitchen</h3><p>Everything needed for morning coffee and relaxed meals at home.</p></article>
-          <article><span class="icon">✦</span><h3>Guest favourite</h3><p>Loved for its comfort, thoughtful details, and attentive hosting.</p></article>
+          <article><span class="icon">⌂</span><h3>Private guest suite</h3><p>Enjoy your own entrance and spaces to relax together.</p></article>
+          <article><span class="icon">⌁</span><h3>Pool and views</h3><p>Take a dip in the pool with Bukit Tabur as a backdrop.</p></article>
+          <article><span class="icon">☕</span><h3>Full kitchen</h3><p>Prepare meals in the kitchen and dine on the outdoor patio.</p></article>
+          <article><span class="icon">✦</span><h3>Wi-Fi and workspace</h3><p>Stay connected with Wi-Fi and a dedicated workspace.</p></article>
         </div>
-      </section>
-
-      <section class="quote-section">
-        <div class="quote-image" data-image-slot="review" role="img" aria-label="Relaxed interior at Balinese Retreat"></div>
-        <figure class="guest-quote reveal">
-          <div class="stars" aria-label="Five stars">★★★★★</div>
-          <blockquote>“The kind of place you wish you could keep to yourself. Peaceful, beautiful, and even better than the photos.”</blockquote>
-          <figcaption>— A recent guest</figcaption>
-        </figure>
       </section>
 
       <section class="location section" id="location">
         <div class="section-label reveal"><span>03</span> The neighbourhood</div>
         <div class="location-copy reveal">
           <p class="eyebrow">Close enough, far enough</p>
-          <h2>Your base for discovering somewhere new.</h2>
-          <p>Peaceful when you want to slow down, well placed when you’re ready to explore. Local favourites, nature, and everyday essentials are all within easy reach.</p>
-          <a class="text-link" href="https://maps.google.com" target="_blank" rel="noreferrer">Explore the area <span>↗</span></a>
+          <h2>Nature close to the city.</h2>
+          <p>In Kemensah, Ampang, forested hills and Bukit Tabur set the scene. Zoo Negara is about five minutes away, and Sofia Jane Waterfalls is about ten minutes away by car.</p>
+          <a class="text-link" href="https://www.google.com/maps/search/Things+to+do+near+Taman+Melawati/@3.2146252,101.7228787,13z/data=!3m1!4b1" target="_blank" rel="noopener noreferrer">Things to do near Taman Melawati <span>↗</span></a>
         </div>
         <div class="map-card reveal">
           <div class="map-lines"></div>
-          <div class="map-pin"><span>Balinese<br />Retreat</span></div>
-          <p>Exact location shared after booking</p>
+          <div class="map-pin"><span>Kemensah<br />Ampang</span></div>
+          <p>Arrival details shared after booking</p>
         </div>
       </section>
 
-      <section class="booking" data-image-slot="booking" role="img" aria-label="Balinese Retreat exterior">
+      <section class="booking" data-image-slot="booking">
         <div class="booking-content reveal">
           <p class="eyebrow light">Your escape is waiting</p>
           <h2>Come stay awhile.</h2>
-          <p>Check your dates, read our verified reviews, and reserve securely through Airbnb.</p>
-          <a class="button button-light" href="https://www.airbnb.com" target="_blank" rel="noreferrer">Check availability <span>↗</span></a>
+          <p>Explore dates and guest reviews, then book your stay securely through Airbnb.</p>
+          <a class="button button-light" href="https://www.airbnb.com/rooms/688787149501313080?source_impression_id=p3_1793886192_P3ub8Sx2WxIDhYxS" target="_blank" rel="noopener noreferrer">Check availability <span>↗</span></a>
         </div>
       </section>
     </main>
 
     <footer>
-      <a class="brand" href="#top">Balinese Retreat</a>
+      <a class="brand" href="#top"><img class="brand-mark" src="images/logo-mark.svg" alt="" /><span class="brand-name">Balinese Retreat</span></a>
       <p>Made for slower days and longer stays.</p>
-      <div><a href="guide.html">House guide</a><a href="mailto:hello@example.com">Email us</a><a href="#">Instagram</a><a href="#">House rules</a></div>
+      <div><a href="stay.html">The stay</a><a href="amenities.html">Amenities</a><a href="location.html">Location</a><a href="availability.html">Calendar</a><a href="https://www.airbnb.com/rooms/688787149501313080?source_impression_id=p3_1793886192_P3ub8Sx2WxIDhYxS" target="_blank" rel="noopener noreferrer">Airbnb listing</a></div>
       <small>© <span id="year"></span> Balinese Retreat</small>
     </footer>
-    <script src="script.js"></script>
+    <script src="script.js?v=4"></script>
   </body>
 </html>
