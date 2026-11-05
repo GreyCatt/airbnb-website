@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 590 108" fill="none" role="img" aria-labelledby="title description">
+  <title id="title">Balinese Retreat</title>
+  <desc id="description">An arch frames the outline of hills above ripples of pool water.</desc>
+  <g stroke="#263128" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14 92V42C14 23.2 29.2 8 48 8s34 15.2 34 34v50" stroke-width="3.4"/>
+    <path d="M22 64 38 48l11 10 16-20 10 24" stroke-width="3"/>
+    <path d="M22 73c9-4 18 4 27 0s18-4 27 0M22 83c9-4 18 4 27 0s18-4 27 0" stroke-width="2.8"/>
+  </g>
+  <text x="111" y="64" fill="#263128" font-family="Newsreader, Georgia, serif" font-size="47" letter-spacing="-1.2">Balinese Retreat</text>
+  <text x="113" y="89" fill="#72806c" font-family="DM Sans, Arial, sans-serif" font-size="12" letter-spacing="3.4">KEMENSAH · AMPANG</text>
+</svg>

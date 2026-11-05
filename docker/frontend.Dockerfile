@@ -3,11 +3,12 @@ FROM node:22-alpine AS development
 RUN npm install --global live-server@1.2.2
 
 WORKDIR /app
-COPY frontend/index.html frontend/guide.html frontend/styles.css frontend/script.js ./
+COPY frontend/index.html frontend/stay.html frontend/amenities.html frontend/location.html frontend/availability.html frontend/guide.html frontend/styles.css frontend/script.js frontend/calendar.js ./
+COPY frontend/images ./images
 
 EXPOSE 80
 
-CMD ["live-server", ".", "--host=0.0.0.0", "--port=80", "--no-browser", "--watch=index.html,guide.html,styles.css,script.js"]
+CMD ["live-server", ".", "--host=0.0.0.0", "--port=80", "--no-browser", "--watch=index.html,stay.html,amenities.html,location.html,availability.html,guide.html,styles.css,script.js,calendar.js,images"]
 
 FROM nginx:1.27-alpine AS production
 

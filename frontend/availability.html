@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="View a read-only calendar of dates currently blocked on Airbnb for Balinese Retreat in Ampang." />
+    <title>Calendar — Balinese Retreat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet" />
+    <link rel="icon" href="images/logo-mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header bare-header">
+      <a class="brand" href="index.html" aria-label="Balinese Retreat home"><img class="brand-mark" src="images/logo-mark.svg" alt="" />Balinese Retreat</a>
+      <button class="menu-button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+      <nav class="navigation" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="stay.html">The stay</a>
+        <a href="amenities.html">Amenities</a>
+        <a href="location.html">Location</a>
+        <a href="availability.html" aria-current="page">Calendar</a>
+        <a class="nav-cta" href="https://www.airbnb.com/rooms/688787149501313080?source_impression_id=p3_1793886192_P3ub8Sx2WxIDhYxS" target="_blank" rel="noopener noreferrer">Check availability</a>
+      </nav>
+    </header>
+    <main class="inner-page">
+      <section class="page-intro section">
+        <p class="eyebrow">Calendar</p>
+        <h1>Plan your stay.</h1>
+        <p>Choose your check-in and check-out dates below. Shaded days are blocked on Airbnb. You’ll confirm the latest availability and book on Airbnb.</p>
+      </section>
+      <section class="calendar-section section" aria-labelledby="calendar-title">
+        <div class="calendar-heading">
+          <div><p class="eyebrow">Dates at a glance</p><h2 id="calendar-title">Airbnb calendar</h2></div>
+          <div class="calendar-controls"><button id="previous-month" type="button" aria-label="Previous months">←</button><button id="next-month" type="button" aria-label="Next months">→</button></div>
+        </div>
+        <p id="calendar-status" class="calendar-status" role="status" aria-live="polite">Loading blocked dates…</p>
+        <div class="calendar-legend"><span class="legend-swatch"></span> Blocked on Airbnb</div>
+        <p id="calendar-selection" class="calendar-selection" role="status" aria-live="polite">Choose a check-in date, then a check-out date. Tap a selected date again to clear it.</p>
+        <div id="calendar-months" class="calendar-months" aria-label="Availability calendar"></div>
+        <p class="calendar-note">Calendar updates can take time, and unshaded dates may still be unavailable. Airbnb has the latest booking details.</p>
+        <p class="calendar-note">For bookings of 8 or more guests, a third bedroom and bathroom are included.</p>
+        <a id="calendar-booking-link" class="button button-dark" href="https://www.airbnb.com/rooms/688787149501313080?source_impression_id=p3_1793886192_P3ub8Sx2WxIDhYxS" target="_blank" rel="noopener noreferrer">Continue to Airbnb <span aria-hidden="true">↗</span></a>
+        <p id="calendar-fallback" class="calendar-fallback" hidden>If Airbnb has trouble opening your selected dates, <a href="https://www.airbnb.com/rooms/688787149501313080?source_impression_id=p3_1793886192_P3ub8Sx2WxIDhYxS" target="_blank" rel="noopener noreferrer">open the listing directly</a> and enter the dates there.</p>
+      </section>
+    </main>
+    <footer><a class="brand" href="index.html"><img class="brand-mark" src="images/logo-mark.svg" alt="" />Balinese Retreat</a><p>Made for slower days and longer stays.</p><div><a href="index.html">Home</a><a href="stay.html">The stay</a><a href="amenities.html">Amenities</a><a href="location.html">Location</a></div><small>© <span id="year"></span> Balinese Retreat</small></footer>
+    <script src="script.js?v=4"></script>
+    <script src="calendar.js?v=3"></script>
+  </body>
+</html>

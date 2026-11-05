@@ -9,6 +9,7 @@ Thumbs.db
 # Local environment and logs
 .env
 .env.*
+!docker/.env.example
 *.log
 
 # Temporary files
